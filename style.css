@@ -16,7 +16,7 @@ body {
 }
 
 p {
-  font-size: clamp(1.3rem, 5.5vw, 3.5rem);
+  font-size: clamp(1.1rem, 4.8vw, 2.2rem);
   line-height: 1.5;
   text-align: center;
   margin-bottom: 2rem;
@@ -37,6 +37,10 @@ p {
   padding: 1rem;
   border-radius: 20px;
   transition: all 0.3s ease-in-out;
+  display: inline-block;
+  width: 500px;
+  text-align: center;
+  perspective: 1000px;
 }
 
 .stuff:hover {
@@ -59,6 +63,7 @@ p {
   overflow: hidden;
   font-weight: bold;
   bottom: 9rem;
+  box-shadow: 1px 1px 10px #050505;
 }
 
 #generate::after {
@@ -74,7 +79,7 @@ p {
     rgba(255, 255, 255, 0) 70%
   );
   transform: scale(0);
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 #generate:hover::after {
@@ -84,4 +89,16 @@ p {
 #generate:hover {
   border-color: #666666;
   background: #292929;
+  box-shadow: 1px 1px 10px #202020;
+}
+
+#thing,
+#something,
+#language {
+  transition: all 0.05s ease-out;
+}
+
+#generate:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
